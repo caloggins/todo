@@ -1,21 +1,32 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import TaskForm from './TaskForm'
+import './App.css'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
-    );
-  }
+export class App extends Component {
+    renderItems() {
+        return this.props.tasks.map(task => {
+            return (
+                <div className="list-group-item" key={task.id}>
+                    <div>{task.description}</div>
+                    <div className="btn btn-default">Delete</div>
+                </div>
+            )
+        })
+    }
+
+    render() {
+        return (
+            <div className="App">
+                <div className="list-group">{this.renderItems()}</div>
+                <TaskForm />
+            </div>
+        )
+    }
 }
 
-export default App;
+function mapStateToProps({ tasks }) {
+    return { tasks: tasks }
+}
+
+export default connect(mapStateToProps)(App)

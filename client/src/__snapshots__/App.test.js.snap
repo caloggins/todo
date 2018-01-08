@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App tests... component tests it renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="list-group"
+  >
+    <div
+      className="list-group-item"
+      key="1"
+    >
+      <div>
+        Get groceries
+      </div>
+      <div
+        className="btn btn-default"
+      >
+        Delete
+      </div>
+    </div>
+    <div
+      className="list-group-item"
+      key="2"
+    >
+      <div>
+        Get gas
+      </div>
+      <div
+        className="btn btn-default"
+      >
+        Delete
+      </div>
+    </div>
+    <div
+      className="list-group-item"
+      key="3"
+    >
+      <div>
+        Pay bills
+      </div>
+      <div
+        className="btn btn-default"
+      >
+        Delete
+      </div>
+    </div>
+  </div>
+  <Connect(TaskForm) />
+</div>
+`;
+
+exports[`App tests... component tests renders correctly 1`] = `
+<div
+  className="App"
+>
+  <div
+    className="list-group"
+  />
+  <Connect(TaskForm) />
+</div>
+`;

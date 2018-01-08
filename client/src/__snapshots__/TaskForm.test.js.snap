@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TaskForm tests... Component rendering tests... renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="form-group"
+  >
+    <label
+      htmlFor="taskDescription"
+    >
+      Description:
+    </label>
+    <input
+      className="form-control"
+      id="taskDescription"
+      onChange={[Function]}
+      placeholder="Enter description."
+    />
+    <button
+      className="btn btn-primary"
+      type="submit"
+    >
+      Add
+    </button>
+  </div>
+</form>
+`;
